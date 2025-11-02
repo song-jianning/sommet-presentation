@@ -1,0 +1,1019 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>专家介绍 / Présentation des Experts</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/moon.css">
+
+    <style>
+        /* 最终修复版 CSS 样式 (V19 - 基于PDF文件内容) */
+        .reveal {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-size: 24px; 
+        }
+        
+        /* 顶部主标题样式 */
+        .name-highlight {
+            font-size: 1.6em; 
+            margin-bottom: 3px;
+        }
+        .reveal h2 {
+            font-size: 0.7em; 
+            margin-top: -5px;
+            margin-bottom: 8px;
+            color: #ccc;
+        }
+        .reveal h1.session-title {
+            font-size: 2.2em; 
+            margin-bottom: 5px;
+            color: #f99d1c;
+        }
+
+
+        /* ==== 专家双列布局 (6位专家页使用) ==== */
+        .dual-column-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; 
+            width: 95%; 
+            margin: 0 auto;
+            margin-top: 5px; 
+        }
+        .left-profile {
+            width: 28%; 
+            text-align: center;
+            padding-right: 15px;
+        }
+        .right-academics {
+            width: 72%;
+            padding-left: 15px;
+            text-align: left; 
+            border-left: 1px solid rgba(255, 255, 255, 0.2); 
+        }
+
+        /* ==== 主持人三列布局 (新增第一页使用) ==== */
+        .three-column-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start; 
+            width: 95%;
+            margin: 0 auto;
+            margin-top: 30px; 
+        }
+        .speaker-profile {
+            width: 32%; 
+            text-align: center;
+            padding: 0 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        /* 人物图片样式 - 强制固定大小和比例 */
+        .reveal .slides section .profile-image { 
+            width: 190px !important; 
+            height: 190px !important; 
+            aspect-ratio: 1/1; 
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 5px;
+            border: 3px solid #f99d1c; 
+        }
+        
+        /* 右侧/主持人介绍标题（基准样式：无强制高度） */
+        .section-title {
+            font-size: 1.15em; 
+            color: #2a73d3; 
+            margin-top: 0;
+            margin-bottom: 6px; 
+            font-weight: bold;
+            line-height: 1.1em; 
+        }
+
+        /* 仅对主持人页中的标题强制占位两行 */
+        .three-column-container .section-title {
+            min-height: 2.2em; 
+        }
+
+        /* 核心单位职务信息字体基准样式 */
+        .base-info-text {
+            font-size: 0.68em; 
+            margin-top: 0;
+            margin-bottom: 2px; 
+            line-height: 1.1; 
+            min-height: 40px; 
+        }
+        /* 针对三列布局中的文字进一步调整 */
+        .three-column-container .base-info-text {
+            font-size: 0.65em; 
+            min-height: 40px; 
+        }
+        
+        /* 关键：确保中文和法文介绍区块整体在各自列内实现水平对齐 */
+        .speaker-info-container {
+            width: 100%; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            /* 强制这个容器的高度一致，以实现下一层的水平对齐 */
+            min-height: 120px; 
+            margin-bottom: 20px;
+        }
+
+        /* 中文单位职务颜色 */
+        .base-info-text-cn {
+            color: #f99d1c; /* 橙黄色 */
+        }
+        /* 法文单位职务颜色 */
+        .base-info-text-fr {
+            color: lightblue; /* 浅蓝色 */
+        }
+
+        /* 右侧专家介绍内容 */
+        .description-text {
+            font-size: 0.7em; 
+            line-height: 1.2; 
+            margin-bottom: 9px; 
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="reveal">
+        <div class="slides">
+
+            <section data-background-color="#3b3d44">
+                <h1 class="session-title">
+                    <span style="display: block;">会场一 / Session 1</span>
+                </h1>
+                <h2 style="color: #ccc; font-size: 1.2em;">主持人介绍 / Présentation des Modérateurs </h2>
+            </section>
+            
+            <section>
+                <h1 class="name-highlight" style="font-size: 1.8em; margin-bottom: 5px;">
+                    <span style="display: block; color: #f99d1c;">会场一主持人 / Modérateurs Session 1</span>
+                </h1>
+                <hr style="width: 50%; margin: 15px auto;">
+
+                <div class="three-column-container">
+                    
+                    <div class="speaker-profile">
+                        <img src="images/王刚.JPG" alt="王刚照片" class="profile-image">
+                        <h3 class="section-title" style="margin-top: 15px; margin-bottom: 0px;">
+                            王刚 / Wang Gang
+                        </h3>
+                        <div class="speaker-info-container">
+                            <p class="base-info-text">
+                                <span class="base-info-text-cn">第31批援几内亚中国医疗队，<br>北京友谊医院心内科</span>
+                            </p>
+                            <p class="base-info-text">
+                                <span class="base-info-text-fr">31e équipe médicale chinoise, <br>Département de cardiologie de l'Hôpital de l'Amitié de Pékin (CMU)</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="speaker-profile">
+                        <img src="images/Mohamed Lélouma MANSARE.png" alt="Mohamed Lélouma MANSARE照片" class="profile-image">
+                        <h3 class="section-title" style="margin-top: 15px; margin-bottom: 0px;">
+                            Mohamed Lélouma MANSARE
+                        </h3>
+                        <div class="speaker-info-container">
+                            <p class="base-info-text">
+                                <span class="base-info-text-cn">东卡医院、科纳克里大学，神经内科</span>
+                            </p>
+                            <p class="base-info-text">
+                                <span class="base-info-text-fr">Unité de Neurologie, Hôpital National de Donka, <br>CHU de Conakry</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="speaker-profile">
+                        <img src="images/Pr Souaré Ibrahima Sory.JPG" alt="Pr Souaré Ibrahima Sory照片" class="profile-image">
+                        <h3 class="section-title" style="margin-top: 15px; margin-bottom: 0px;">
+                            Pr Souaré Ibrahima Sory
+                        </h3>
+                        <div class="speaker-info-container">
+                            <p class="base-info-text">
+                                <span class="base-info-text-cn">中几友好医院，副院长、神经外科主任</span>
+                            </p>
+                            <p class="base-info-text">
+                                <span class="base-info-text-fr">Hôpital de l'Amitié Sino-Guinéenne, <br>Directeur général adjoint, Chef du service de neurochirurgie</span>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            
+            <section data-background-color="#3b3d44">
+                <h1 class="session-title">
+                    <span style="display: block;">会场一 / Session 1</span>
+                </h1>
+                <h2 style="color: #ccc; font-size: 1.2em;">主讲人介绍 / Présentation des Intervenants</h2>
+            </section>
+
+            <section>
+                <h1 class="name-highlight"><span style="display: block;">孙建军 / Sun Jianjun</span></h1>
+                <h2 style="color: #f99d1c;">主任医师、副教授、硕士生导师 / Médecin en chef, Professeur agrégé, Superviseur de master</h2>
+                <div class="dual-column-container">
+                    <div class="left-profile">
+                        <img src="images/孙建军.jpg" alt="孙建军主任照片" class="profile-image">
+                        <p class="base-info-text">
+                            <span class="base-info-text-cn">首都医科大学附属北京友谊医院，神经外科主任</span>
+                        </p>
+                        <p class="base-info-text" style="margin-top: 10px;">
+                            <span class="base-info-text-fr">Hôpital de l'Amitié de Pékin (CMU), Directeur du Département de neurochirurgie</span>
+                        </p>
+                    </div>
+                    <div class="right-academics">
+                        <div style="margin-bottom: 18px;">
+                            <h3 class="section-title">🇨🇳 介绍</h3>
+                            <p class="description-text">
+                                专业方向: 髋管疾病; 运动失能; 神经胶质瘤和脑转移瘤; 颅底内外沟通肿瘤。
+                                <br><br>
+                                学术兼职: 多个学会常委或委员; 多部杂志编委或审稿专家。
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="section-title">🇬🇳 Introduction</h3>
+                            <p class="description-text">
+                                Domaines de spécialisation: maladies du canal rachidien; incapacité motrice; gliomes et métastases cérébrales; tumeurs de la base du crâne avec communication intra-extra crânienne.
+                                <br><br>
+                                Fonctions académiques: Membre permanent ou membre de plusieurs sociétés; Membre du comité de rédaction ou expert relecteur pour plusieurs revues.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h1 class="name-highlight"><span style="display: block;">SOUARE IBRAHIMA SORY</span></h1>
+                <h2 style="color: #f99d1c;">医学博士 / Docteur en Médecine</h2>
+                <div class="dual-column-container">
+                    <div class="left-profile">
+                        <img src="images/SOUARE IBRAHIMA SORY.jpeg" alt="SOUARE IBRAHIMA SORY照片" class="profile-image">
+                        <p class="base-info-text">
+                            <span class="base-info-text-cn">中几友好医院，神经外科医生</span>
+                        </p>
+                        <p class="base-info-text" style="margin-top: 10px;">
+                            <span class="base-info-text-fr">Hôpital de l'Amitié Sino-Guinéenne, Neurochirurgien</span>
+                        </p>
+                    </div>
+                    <div class="right-academics">
+                        <div style="margin-bottom: 18px;">
+                            <h3 class="section-title">🇨🇳 介绍</h3>
+                            <p class="description-text">
+                                专业方向: 显微外科、神经肿瘤学、神经血管外科、颅底外科、内镜外科、脊柱外科。
+                                <br><br>
+                                学术任职: 
+                                1. 几内亚国家医师协会理事会(CNOMG)会员、几内亚神经外科学会(SOGUINCH)会员;
+                                2. 世界神经外科联合会(WFNS)会员、世界神经介入联合会(OCIN)会员、国际小儿神经外科学会(ISPN)会员;
+                                3. 中非百名神经外科医生合作项目成员。
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="section-title">🇬🇳 Introduction</h3>
+                            <p class="description-text">
+                                Spécialités et Expertise: Neurochirurgie, Microchirurgie/Neuro-oncologie, Chirurgie Vasculaire, Base du crâne/Endoscopie, Chirurgie de la colonne.
+                                <br><br>
+                                Membres: Membre du Conseil National de l’Ordre des Médecins de Guinée (CNOMG); Membre du projet China Africa 100 neurosurgeons/WFNS; Membre de la Société guinéenne de neurochirurgie (SOGUINCH); Membre de la Fédération Mondiale des Sociétés de Neurochirurgie (WFNS, OCIN, ISPN) (Certifié avec crédits).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h1 class="name-highlight"><span style="display: block;">张拥波 / Zhang Yongbo</span></h1>
+                <h2 style="color: #f99d1c;">主任医师、教授、博士生导师 / Médecin en chef, Professeur, Superviseur de doctorat</h2>
+                <div class="dual-column-container">
+                    <div class="left-profile">
+                        <img src="images/张拥波.jpeg" alt="张拥波主任照片" class="profile-image">
+                        <p class="base-info-text">
+                            <span class="base-info-text-cn">首都医科大学附属北京友谊医院,神经疾病中心副主任; <br>神经内科副主任(主持工作)、首都医科大学神经病学系副主任</span>
+                        </p>
+                        <p class="base-info-text" style="margin-top: 10px;">
+                            <span class="base-info-text-fr">Hôpital de l'Amitié de Pékin (CMU), Vice-directeur du Centre des maladies neurologiques; <br>Vice-directeur du Département de neurologie (responsable des opérations), Vice-directeur du Département de neurologie de l'Université de médecine de la Capitale</span>
+                        </p>
+                    </div>
+                    <div class="right-academics">
+                        <div style="margin-bottom: 18px;">
+                            <h3 class="section-title">🇨🇳 介绍</h3>
+                            <p class="description-text">
+                                专业方向: 脑血管病及认知障碍的基础与临床研究。
+                                <br><br>
+                                学术兼职: 中华医学会神经病学分会神经生物学组副组长; 北京医学会神经病学分会副主任委员; 北京神经内科学会神经疾病预防与脑健康分会主任委员; 北京神经内科学会副会长。
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="section-title">🇬🇳 Introduction</h3>
+                            <p class="description-text">
+                                Domaines de spécialisation: recherche fondamentale et clinique sur les maladies cérébrovasculaires et les troubles cognitifs.
+                                <br><br>
+                                Fonctions académiques: Vice-président du groupe de neurobiologie de la Société chinoise de neurologie; Vice-président de la branche de neurologie de l'Association médicale de Pékin; Président du comité de prévention des maladies neurologiques et de santé cérébrale de la Société pékinoise de médecine neurologique; Vice-président de la Société pékinoise de médecine neurologique.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h1 class="name-highlight"><span style="display: block;">黄榕翀 / Huang Rongchong</span></h1>
+                <h2 style="color: #f99d1c;">主任医师,教授、博士生导师 / Médecin en chef, Professeure, Superviseure de doctorat</h2>
+                <div class="dual-column-container">
+                    <div class="left-profile">
+                        <img src="images/黄榕翀.jpg" alt="黄榕翀主任照片" class="profile-image">
+                        <p class="base-info-text">
+                            <span class="base-info-text-cn">首都医科大学附属北京友谊医院,心血管中心副主任、心内科副主任</span>
+                        </p>
+                        <p class="base-info-text" style="margin-top: 10px;">
+                            <span class="base-info-text-fr">Hôpital de l'Amitié de Pékin (CMU), Vice-directrice du Centre cardiovasculaire, Vice-directrice du Département de cardiologie</span>
+                        </p>
+                    </div>
+                    <div class="right-academics">
+                        <div style="margin-bottom: 18px;">
+                            <h3 class="section-title">🇨🇳 介绍</h3>
+                            <p class="description-text">
+                                专业方向: 复杂心脏病介入诊疗; 肥胖与心血管病预后研究; 医患共同决策临床研究。
+                                <br><br>
+                                学术兼职: 国际医患共同决策委员会委员; 中华预防医学会慢病预防与控制分会常委; 中华中医药学会介入心脏病学会常委; 中华医学会心血管病分会介入心脏病学组委员; 国家自然科学基金评审专家; 国家卫生健康委员会冠脉介入治疗培训基地导师。
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="section-title">🇬🇳 Introduction</h3>
+                            <p class="description-text">
+                                Domaines de spécialisation: diagnostic et traitement interventionnel des cardiopathies complexes; recherche sur l'obésité et le pronostic des maladies cardiovasculaires; recherche clinique sur la décision médicale partagée.
+                                <br><br>
+                                Fonctions académiques: Membre du Comité international de la décision médicale partagée; Membre permanent du comité de prévention et de contrôle des maladies chroniques de l'Association chinoise de médecine préventive; Membre permanent de la Société d'intervention cardiaque de l'Association chinoise de médecine traditionnelle chinoise; Membre du groupe de travail sur la cardiologie interventionnelle de la Société chinoise de cardiologie; Expert évaluateur du Fonds national des sciences naturelle; Mentor de la base de formation en intervention coronarienne de la Commission nationale de la santé.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h1 class="name-highlight"><span style="display: block;">Alpha KONE</span></h1>
+                <h2 style="color: #f99d1c;">医学博士 / Docteur en Médecine</h2>
+                <div class="dual-column-container">
+                    <div class="left-profile">
+                        <img src="images/Alpha KONE.png" alt="Alpha KONE医生照片" class="profile-image">
+                        <p class="base-info-text">
+                            <span class="base-info-text-cn">中几友好医院, 心内科主任</span>
+                        </p>
+                        <p class="base-info-text" style="margin-top: 10px;">
+                            <span class="base-info-text-fr">Hôpital de l'Amitié Sino-Guinéenne, Chef du Service de Cardiologie</span>
+                        </p>
+                    </div>
+                    <div class="right-academics">
+                        <div style="margin-bottom: 18px;">
+                            <h3 class="section-title">🇨🇳 介绍</h3>
+                            <p class="description-text">
+                                专业方向: 心脏病学。
+                                <br><br>
+                                学术兼职: 科纳克里大学卫生科学与技术学院助理教授; 几内亚心脏病学会会员。
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="section-title">🇬🇳 Introduction</h3>
+                            <p class="description-text">
+                                Domaine de spécialisation: Cardiologie。
+                                <br><br>
+                                Fonctions académiques: Maître-assistant à la Faculté des Sciences et Techniques de la Santé de l'UGANC; Membre de la Société Guinéenne de Cardiologie.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section data-background-color="#3b3d44">
+                <h1 class="session-title">
+                    <span style="display: block;">会场二 / Session 2</span>
+                </h1>
+                <h2 style="color: #ccc; font-size: 1.2em;">主持人介绍 / Présentation des Modérateurs</h2>
+            </section>
+            
+            <section>
+                <h1 class="name-highlight" style="font-size: 1.8em; margin-bottom: 5px;">
+                    <span style="display: block; color: #f99d1c;">会场二主持人 / Modérateurs Session 2</span>
+                </h1>
+                <hr style="width: 50%; margin: 15px auto;">
+
+                <div class="three-column-container">
+                    
+                    <div class="speaker-profile">
+                        <img src="images/Mohamed Sahar TRAORE.jpeg" alt="Mohamed Sahar TRAORE照片" class="profile-image">
+                        <h3 class="section-title" style="margin-top: 15px; margin-bottom: 0px;">
+                            Mohamed Sahar TRAORE
+                        </h3>
+                        <div class="speaker-info-container">
+                            <p class="base-info-text">
+                                <span class="base-info-text-cn">Gamal Abdel Nasser大学卫生科学与技术学院药学系, <br>药学与传统医学正教授</span>
+                            </p>
+                            <p class="base-info-text">
+                                <span class="base-info-text-fr">Département Pharmacie, Faculté des Sciences et Techniques de la Santé, <br>Université Gamal Abdel Nasser, Professeur Titulaire de Pharmacognosie et Médecine traditionnelle</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="speaker-profile">
+                        <img src="images/Ibrahima Sory Barry.png" alt="Ibrahima Sory Barry照片" class="profile-image">
+                        <h3 class="section-title" style="margin-top: 15px; margin-bottom: 0px;">
+                            Ibrahima Sory Barry
+                        </h3>
+                        <div class="speaker-info-container">
+                            <p class="base-info-text">
+                                <span class="base-info-text-cn">亚斯汀大学医院中心、科纳克里大学卫生科学与技术学院, <br>心脏病学副教授</span>
+                            </p>
+                            <p class="base-info-text">
+                                <span class="base-info-text-fr">CHU Ignace Deen, Cardiologie, Faculté des Sciences et Techniques de la Santé de <br>l'Université de Conakry, Professeur agrégé en Cardiologie</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="speaker-profile">
+                        <img src="images/刁乃成.JPG" alt="刁乃成照片" class="profile-image">
+                        <h3 class="section-title" style="margin-top: 15px; margin-bottom: 0px;">
+                            刁乃成 / Diao Naicheng
+                        </h3>
+                        <div class="speaker-info-container">
+                            <p class="base-info-text">
+                                <span class="base-info-text-cn">第31批援几内亚中国医疗队书记，<br>北京友谊医院骨科</span>
+                            </p>
+                            <p class="base-info-text">
+                                <span class="base-info-text-fr">Secrétaire de la 31e équipe médicale chinoise, <br>Département d'orthopédie de l'Hôpital de l'Amitié de Pékin (CMU)</span>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section data-background-color="#3b3d44">
+                <h1 class="session-title">
+                    <span style="display: block;">会场二 / Session 2</span>
+                </h1>
+                <h2 style="color: #ccc; font-size: 1.2em;">主讲人介绍 / Présentation des Intervenants</h2>
+            </section>
+
+            <section>
+                <h1 class="name-highlight"><span style="display: block;">Mohamed Sahar TRAORE</span></h1>
+                <h2 style="color: #f99d1c;">药学与传统医学正教授 / Professeur Titulaire de Pharmacognosie et Médecine traditionnelle</h2>
+                <div class="dual-column-container">
+                    <div class="left-profile">
+                        <img src="images/Mohamed Sahar TRAORE.jpeg" alt="Mohamed Sahar TRAORE照片" class="profile-image">
+                        <p class="base-info-text">
+                            <span class="base-info-text-cn">科纳克里大学卫生科学与技术学院药学系</span>
+                        </p>
+                        <p class="base-info-text" style="margin-top: 10px;">
+                            <span class="base-info-text-fr">Département Pharmacie, Faculté des Sciences et Techniques de la Santé, Université Gamal Abdel Nasser</span>
+                        </p>
+                    </div>
+                    <div class="right-academics">
+                        <div style="margin-bottom: 18px;">
+                            <h3 class="section-title">🇨🇳 介绍 </h3>
+                            <p class="description-text">
+                                主要职务: 几内亚应用生物学研究所总干事; 几内亚科学院通讯院士。
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="section-title">🇬🇳 Introduction</h3>
+                            <p class="description-text">
+                                Fonctions principales: Directeur Général de l'Institut de Recherche en Biologie Appliquée de Guinée; Membre correspondant de l'Académie des Sciences de Guinée.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h1 class="name-highlight"><span style="display: block;">刘路遥 / Liu Luyao</span></h1>
+                <h2 style="color: #f99d1c;">主治医师 / Médecin traitant</h2>
+                <div class="dual-column-container">
+                    <div class="left-profile">
+                        <img src="images/刘路遥.JPG" alt="刘路遥医师照片" class="profile-image">
+                        <p class="base-info-text">
+                            <span class="base-info-text-cn">第31批援几内亚中国医疗队; 首都医科大学附属北京友谊医院中医科</span>
+                        </p>
+                        <p class="base-info-text" style="margin-top: 10px;">
+                            <span class="base-info-text-fr">31e équipe médicale chinoise, Département de médecine traditionnelle chinoise de l'Hôpital de l'Amitié de Pékin (CMU)</span>
+                        </p>
+                    </div>
+                    <div class="right-academics">
+                        <div style="margin-bottom: 18px;">
+                            <h3 class="section-title">🇨🇳 介绍</h3>
+                            <p class="description-text">
+                                专业方向: 擅长峨眉天罡指穴法/一指禅正骨推拿/结构针灸等。
+                                <br><br>
+                                学术兼职: 中国医学专刊学会委员; 北京市中西医结合学会适宜技术专委会青年委员; 中医古籍出版社传统医学传承中心副主任; 西城区非物质文化遗产项目代表性传承人; 中医儿科扬州巨字门传人。
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="section-title">🇬🇳 Introduction</h3>
+                            <p class="description-text">
+                                Domaines de spécialisation: maîtrise de la méthode de points d'acupression Tian Gang d'Emei, de la méthode Zheng Gu Tui Na du doigt unique (Yi Zhi Chan), de l'acupuncture structurelle, etc.
+                                <br><br>
+                                Fonctions académiques: Membre de la Société des publications médicales chinoises; Jeune membre du comité des technologies appropriées de l'Association pékinoise de médecine intégrative; Vice-directeur du Centre de transmission de la médecine traditionnelle des Presses des anciens livres de MTC; Représentant héréditaire du projet du patrimoine culturel immatériel du district de Xicheng; Héritier de la branche Yangzhou Juzi en pédiatrie de la médecine traditionnelle chinoise.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h1 class="name-highlight"><span style="display: block;">王云 / Wang Yun</span></h1>
+                <h2 style="color: #f99d1c;">主任医师、教授、博士生导师 / Médecin en chef, Professeur, Superviseur de doctorat</h2>
+                <div class="dual-column-container">
+                    <div class="left-profile">
+                        <img src="images/王云.png" alt="王云主任照片" class="profile-image">
+                        <p class="base-info-text">
+                            <span class="base-info-text-cn">首都医科大学附属北京友谊医院, 麻醉手术中心主任</span>
+                        </p>
+                        <p class="base-info-text" style="margin-top: 10px;">
+                            <span class="base-info-text-fr">Hôpital de l'Amitié de Pékin (CMU), Directeur du Centre d'anesthésiologie et de chirurgie</span>
+                        </p>
+                    </div>
+                    <div class="right-academics">
+                        <div style="margin-bottom: 18px;">
+                            <h3 class="section-title">🇨🇳 介绍</h3>
+                            <p class="description-text">
+                                专业方向: 疼痛分子机制与临床诊疗研究; 超声在麻醉、重症和疼痛治疗中的应用。
+                                <br><br>
+                                学术兼职: 中华医学会麻醉学分会超声学组副组长; 中国医师协会麻醉学医师分会委员; 中国医促会区域麻醉与疼痛医学分会副主任委员; 中国超声医学工程学会麻醉与疼痛分会副主任委员; 北京医学会麻醉学分会常委兼秘书长。
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="section-title">🇬🇳 Introduction</h3>
+                            <p class="description-text">
+                                Domaines de spécialisation: recherche sur les mécanismes moléculaires et le diagnostic clinique de la douleur; application de l'échographie en anesthésie, soins intensifs 和 traitement de la douleur.
+                                <br><br>
+                                Fonctions académiques: Vice-président du groupe de travail sur l'échographie de la Société chinoise d'anesthésiologie; Membre de la branche des anesthésistes de l'Association chinoise des médecins; Vice-président de la branche d'anesthésie régionale 和 de médecine de la douleur de l'Association chinoise pour la promotion de la santé; Vice-président de la branche d'anesthésie et de douleur de la Société chinoise d'ingénierie en échographie médicale; Membre permanent et secrétaire général de la branche d'anesthésiologie de l'Association médicale de Pékin.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h1 class="name-highlight"><span style="display: block;">Keita Karinka</span></h1>
+                <h2 style="color: #f99d1c;">骨科与创伤科医生 / Chirurgien Orthopédiste et Traumatologue </h2>
+                <div class="dual-column-container">
+                    <div class="left-profile">
+                        <img src="images/Keita Karinka.JPG" alt="Keita Karinka照片" class="profile-image">
+                        <p class="base-info-text">
+                            <span class="base-info-text-cn">中几友好医院，骨科与创伤科医生</span>
+                        </p>
+                        <p class="base-info-text" style="margin-top: 10px;">
+                            <span class="base-info-text-fr">Chirurgien Orthopédiste et Traumatologue de l’hôpital de l’amitié sino-guinéenne de Kipé</span>
+                        </p>
+                    </div>
+                    <div class="right-academics">
+                        <div style="margin-bottom: 18px;">
+                            <h3 class="section-title">🇨🇳 介绍</h3>
+                            <p class="description-text">
+                                教育背景及学术任职: 科纳克里大学国家医学文凭，Cheikh Anta Diop de Dakar大学骨科及创伤外科专科文凭，科纳克里大学卫生科学与技术学院助理。
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="section-title">🇬🇳 Introduction</h3>
+                            <p class="description-text">
+                                Formation et Fonctions Académiques: Diplôme d’État en médecine de l’Université Gamal Abdel Nasser de Conakry, Diplôme d’études spéciale en chirurgie Orthopédique et Traumatologique de l’Université Cheikh Anta Diop de Dakar, Assistant à la faculté des sciences et techniques de la santé de l’UGANC.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h1 class="name-highlight"><span style="display: block;">沈洪亮 / Shen Hongliang</span></h1>
+                <h2 style="color: #f99d1c;">主任医师、副教授、硕士生导师 / Médecin en chef, Professeur agrégé, Superviseur de master</h2>
+                <div class="dual-column-container">
+                    <div class="left-profile">
+                        <img src="images/沈洪亮.jpeg" alt="沈洪亮主任照片" class="profile-image">
+                        <p class="base-info-text">
+                            <span class="base-info-text-cn">首都医科大学附属北京友谊医院泌尿外科</span>
+                        </p>
+                        <p class="base-info-text" style="margin-top: 10px;">
+                            <span class="base-info-text-fr">Département d'urologie de l'Hôpital de l'Amitié de Pékin (CMU)</span>
+                        </p>
+                    </div>
+                    <div class="right-academics">
+                        <div style="margin-bottom: 18px;">
+                            <h3 class="section-title">🇨🇳 介绍</h3>
+                            <p class="description-text">
+                                专业方向: 前列腺增生及泌尿系肿瘤的微创治疗。
+                                <br><br>
+                                学术兼职: 北京医学会泌尿青委; 北京抗癌协会泌尿肿瘤青年委员; 北京肿瘤学会泌尿肿瘤学会委员; 北京医师协会男科分委委员; 美国耶鲁大学访问学者。
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="section-title">🇬🇳 Introduction</h3>
+                            <p class="description-text">
+                                Domaines de spécialisation: traitement mini-invasif de l'hyperplasie bénigne de la prostate et des tumeurs urologiques.
+                                <br><br>
+                                Fonctions académiques: Membre du comité des jeunes urologues de l'Association médicale de Pékin; Jeune membre de l'Association pékinoise de lutte contre le cancer pour les tumeurs urologiques; Membre de la Société des tumeurs urologiques de la Société pékinoise d'oncologie; Membre de la branche d'andrologie de l'Association des médecins de Pékin; Ancien chercheur invité à l'Université de Yale.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h1 class="name-highlight"><span style="display: block;">SOW THIERNO AMADOU OURY</span></h1>
+                <h2 style="color: #f99d1c;">泌尿外科医生 / Chirurgien Urologue</h2>
+                <div class="dual-column-container">
+                    <div class="left-profile">
+                        <img src="images/SOW THIERNO AMADOU OURY.jpg" alt="SOW THIERNO AMADOU OURY照片" class="profile-image">
+                        <p class="base-info-text">
+                            <span class="base-info-text-cn">中几友好医院, 泌尿外科</span>
+                        </p>
+                        <p class="base-info-text" style="margin-top: 10px;">
+                            <span class="base-info-text-fr">Chirurgien Urologue à l’hôpital de l’Amitié Sino-Guinéenne de Conakry</span>
+                        </p>
+                    </div>
+                    <div class="right-academics">
+                        <div style="margin-bottom: 18px;">
+                            <h3 class="section-title">🇨🇳 介绍</h3>
+                            <p class="description-text">
+                                教育背景: 科纳克里大学卫生科学与技术学院。
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="section-title">🇬🇳 Introduction</h3>
+                            <p class="description-text">
+                                Formation: Faculté des Sciences et Techniques de la Santé de l’Université Gamal Abdel Nasser de Conakry.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h1 class="name-highlight"><span style="display: block;">CAMARA Naby Soriba</span></h1>
+                <h2 style="color: #f99d1c;">普外科医生 / Chirurgien général</h2>
+                <div class="dual-column-container">
+                    <div class="left-profile">
+                        <img src="images/Soriba.JPG" alt="CAMARA Naby Soriba照片" class="profile-image">
+                        <p class="base-info-text">
+                            <span class="base-info-text-cn">中几友好医院, 普外科</span>
+                        </p>
+                        <p class="base-info-text" style="margin-top: 10px;">
+                            <span class="base-info-text-fr">Hôpital de l’Amitié Sino-Guinéenne, Chirurgien général</span>
+                        </p>
+                    </div>
+                    <div class="right-academics">
+                        <div style="margin-bottom: 18px;">
+                            <h3 class="section-title">🇨🇳 介绍</h3>
+                            <p class="description-text">
+                                学位: 医学博士。
+                                <br><br>
+                                专业方向: 血管外科；内脏和消化外科。
+                                <br><br>
+                                学术兼职: 科纳克里大学卫生科学与技术学院助理教授，卫生科学与技术学院（FSTS）教学科研人员；拉托马区（科纳克里市）医师协会会长。
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="section-title">🇬🇳 Introduction</h3>
+                            <p class="description-text">
+                                Diplôme: Docteur en Médecine.
+                                <br><br>
+                                Domaines de spécialisation: Chirurgie vasculaire; Chirurgie viscérale et digestive.
+                                <br><br>
+                                Fonctions académiques: Maître-assistant à la Faculté des Sciences et Techniques de la Santé de l’Université de Conakry. Enseignant chercheur à la FSTS, Président de l'ordre des médecins de la commune de Ratoma.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h1 class="name-highlight"><span style="display: block;">CONDÉ ABRAHAM YOUSSOUF</span></h1>
+                <h2 style="color: #f99d1c;">普外科医生 / Chirurgien général</h2>
+                <div class="dual-column-container">
+                    <div class="left-profile">
+                        <img src="images/CONDÉ ABRAHAM YOUSSOUF.JPG" alt="CONDÉ ABRAHAM YOUSSOUF照片" class="profile-image">
+                        <p class="base-info-text">
+                            <span class="base-info-text-cn">中几友好医院, 普外科</span>
+                        </p>
+                        <p class="base-info-text" style="margin-top: 10px;">
+                            <span class="base-info-text-fr">Hôpital de l’Amitié Sino-Guinéenne, Chirurgien général</span>
+                        </p>
+                    </div>
+                    <div class="right-academics">
+                        <div style="margin-bottom: 18px;">
+                            <h3 class="section-title">🇨🇳 介绍</h3>
+                            <p class="description-text">
+                                学位: 医学博士。
+                                <br><br>
+                                专业方向: 腹部外科，内脏和消化外科。
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="section-title">🇬🇳 Introduction</h3>
+                            <p class="description-text">
+                                Diplôme: Docteur en Médecine.
+                                <br><br>
+                                Domaines de spécialisation: Chirurgie viscérale et digestive.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section data-background-color="#3b3d44">
+                <h1 class="session-title">
+                    <span style="display: block;">会场三 / Session 3</span>
+                </h1>
+                <h2 style="color: #ccc; font-size: 1.2em;">主持人介绍 / Présentation des Modérateurs</h2>
+            </section>
+            
+            <section>
+                <h1 class="name-highlight" style="font-size: 1.8em; margin-bottom: 5px;">
+                    <span style="display: block; color: #f99d1c;">会场三主持人 / Modérateurs Session 3</span>
+                </h1>
+                <hr style="width: 50%; margin: 15px auto;">
+
+                <div class="three-column-container">
+                    
+                    <div class="speaker-profile">
+                        <img src="images/El Hadj Yaya Baldé.png" alt="Yaya Baldé照片" class="profile-image">
+                        <h3 class="section-title" style="margin-top: 15px; margin-bottom: 0px;">
+                            EI Hadj Yaya Baldé
+                        </h3>
+                        <div class="speaker-info-container">
+                            <p class="base-info-text">
+                                <span class="base-info-text-cn">亚斯汀大学医院中心, 心内科主任</span>
+                            </p>
+                            <p class="base-info-text">
+                                <span class="base-info-text-fr">CHU Ignace Deen, Chef du Service de Cardiologie</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="speaker-profile">
+                        <img src="images/placeholder.png" alt="Mohamed Lamine Touré照片" class="profile-image">
+                        <h3 class="section-title" style="margin-top: 15px; margin-bottom: 0px;">
+                            Mohamed Lamine Touré
+                        </h3>
+                        <div class="speaker-info-container">
+                            <p class="base-info-text">
+                                <span class="base-info-text-cn">亚斯汀大学医院中心, 神经内科</span>
+                            </p>
+                            <p class="base-info-text">
+                                <span class="base-info-text-fr">HN Ignace Deen, Neurologe</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="speaker-profile">
+                        <img src="images/佟献增.JPG" alt="佟献增照片" class="profile-image">
+                        <h3 class="section-title" style="margin-top: 15px; margin-bottom: 0px;">
+                            佟献增 / Tong Xianzeng
+                        </h3>
+                        <div class="speaker-info-container">
+                            <p class="base-info-text">
+                                <span class="base-info-text-cn">第31批援几内亚中国医疗队; <br>北京友谊医院神经外科</span>
+                            </p>
+                            <p class="base-info-text">
+                                <span class="base-info-text-fr">31e équipe médicale chinoise, <br>Département de neurochirurgie de l'Hôpital de l'Amitié de Pékin (CMU)</span>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section data-background-color="#3b3d44">
+                <h1 class="session-title">
+                    <span style="display: block;">会场三 / Session 3</span>
+                </h1>
+                <h2 style="color: #ccc; font-size: 1.2em;">主讲人介绍 / Présentation des Intervenants</h2>
+            </section>
+
+            <section>
+                <h1 class="name-highlight"><span style="display: block;">EI Hadj Yaya Baldé</span></h1>
+                <h2 style="color: #f99d1c;">心脏病专家、副教授 / Cardiologue, Professeur agrégé</h2>
+                <div class="dual-column-container">
+                    <div class="left-profile">
+                        <img src="images/El Hadj Yaya Baldé.png" alt="Yaya Baldé医生照片" class="profile-image">
+                        <p class="base-info-text">
+                            <span class="base-info-text-cn">亚斯汀大学医院中心, 心内科主任</span>
+                        </p>
+                        <p class="base-info-text" style="margin-top: 10px;">
+                            <span class="base-info-text-fr">CHU Ignace Deen, Chef du Service de Cardiologie</span>
+                        </p>
+                    </div>
+                    <div class="right-academics">
+                        <div style="margin-bottom: 18px;">
+                            <h3 class="section-title">🇨🇳 介绍</h3>
+                            <p class="description-text">
+                                专业方向: 心脏病学。
+                                <br><br>
+                                学术任职: 非洲医学教育与卫生发展委员会(CAMES)认证讲师，科纳克里大学副教授。
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="section-title">🇬🇳 Introduction</h3>
+                            <p class="description-text">
+                                Domaine de spécialisation: Cardiologie。
+                                <br><br>
+                                Fonctions académiques: Faculté des Sciences et Techniques de la Santé, Université Gamal Abdel Nasser, Maître de conférences agrégé du CAMES。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h1 class="name-highlight"><span style="display: block;">Ibrahima Sory Barry</span></h1>
+                <h2 style="color: #f99d1c;">心脏病学副教授 / Professeur agrégé en Cardiologie</h2>
+                <div class="dual-column-container">
+                    <div class="left-profile">
+                        <img src="images/Ibrahima Sory Barry.png" alt="Ibrahima Sory Barry照片" class="profile-image">
+                        <p class="base-info-text">
+                            <span class="base-info-text-cn">亚斯汀大学医院中心、科纳克里大学卫生科学与技术学院</span>
+                        </p>
+                        <p class="base-info-text" style="margin-top: 10px;">
+                            <span class="base-info-text-fr">CHU Ignace Deen, Cardiologie, Faculté des Sciences et Techniques de la Santé de l'Université de Conakry</span>
+                        </p>
+                    </div>
+                    <div class="right-academics">
+                        <div style="margin-bottom: 18px;">
+                            <h3 class="section-title">🇨🇳 介绍</h3>
+                            <p class="description-text">
+                                专业方向: 心脏病学。
+                                <br><br>
+                                学术兼职: 美国心脏病学院会员; 瑞士儿科心脏病学会会员; 法国血管医学学会会员; 西非和中非心脏病学会会员; 西非医生学院会员; 塞内加尔心脏病学会会员; 几内亚心脏病学会会员。
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="section-title">🇬🇳 Introduction</h3>
+                            <p class="description-text">
+                                Domaine de spécialisation: Cardiologie。
+                                <br><br>
+                                Fonctions académiques: Membre de l'American College of Cardiology (ACC); Membre de la Société Suisse de Cardiologie Pédiatrique (SSCP); Membre de la Société Française de Médecine Vasculaire (SFMV); Membre des Sociétés de Cardiologie de l'Afrique de l'Ouest et du Centre (ASCOAC); Membre du Collège Ouest Africain des Médecins (COAM); Membre de la Société Sénégalaise de Cardiologie (SOSECAR); Membre de la Société Guinéenne de Cardiologie。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h1 class="name-highlight"><span style="display: block;">Fodé Abass Cissé</span></h1>
+                <h2 style="color: #f99d1c;">神经学家、CAMES正教授 / Neurologue, Professeur Titulaire du CAMES</h2>
+                <div class="dual-column-container">
+                    <div class="left-profile">
+                        <img src="images/placeholder.png" alt="Fodé Abass Cissé照片" class="profile-image">
+                        <p class="base-info-text">
+                            <span class="base-info-text-cn">亚斯汀大学医院中心, 神经内科主任</span>
+                        </p>
+                        <p class="base-info-text" style="margin-top: 10px;">
+                            <span class="base-info-text-fr">CHU Ignace Deen, Chef du Service de Neurologie</span>
+                        </p>
+                    </div>
+                    <div class="right-academics">
+                        <div style="margin-bottom: 18px;">
+                            <h3 class="section-title">🇨🇳 介绍</h3>
+                            <p class="description-text">
+                                专业方向: 神经学; 脑卒中; 癫痫。
+                                <br><br>
+                                学术兼职: 神经学专业研究文凭主任; 几内亚神经学家学院主席; 疼痛评估与治疗大学文凭协调员; 几内亚神经学会主席; 几内亚癫痫项目主任; 神经科学、流行病学和慢性病实验室主任。
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="section-title">🇬🇳 Introduction </h3>
+                            <p class="description-text">
+                                Domaines de spécialisation: Neurologie; Accidents vasculaires cérébraux; Épilepsie。
+                                <br><br>
+                                Fonctions académiques: Directeur du Diplôme d'études Spécialisées de Neurologie; Président du Collège des Neurologues en Guinée; Coordinateur du Diplôme Universitaire (DU) en Évaluation et Traitement de la Douleur; Président de la Société guinéenne de neurologie; Directeur du Guinean Epilepsy Project; Directeur du Laboratoire de neurosciences, d'épidémiologie et des maladies chroniques。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h1 class="name-highlight"><span style="display: block;">Mohamed Lélouma MANSARE</span></h1>
+                <h2 style="color: #f99d1c;">医学与公共卫生双博士 / MD-PH</h2>
+                <div class="dual-column-container">
+                    <div class="left-profile">
+                        <img src="images/Mohamed Lélouma MANSARE.png" alt="Mohamed Lélouma MANSARE照片" class="profile-image">
+                        <p class="base-info-text">
+                            <span class="base-info-text-cn">东卡医院、科纳克里大学, 神经内科</span>
+                        </p>
+                        <p class="base-info-text" style="margin-top: 10px;">
+                            <span class="base-info-text-fr">Unité de Neurologie, Hôpital National de Donka, CHU de Conakry</span>
+                        </p>
+                    </div>
+                    <div class="right-academics">
+                        <div style="margin-bottom: 18px;">
+                            <h3 class="section-title">🇨🇳 介绍</h3>
+                            <p class="description-text">
+                                专业方向: 神经系统疾病、疼痛疾病、癫痫。
+                                <br><br>
+                                学术兼职: 几内亚科纳克里大学(UGANC), 科学技术与卫生学院(FSTS), 助理教授。
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="section-title">🇬🇳 Introduction</h3>
+                            <p class="description-text">
+                                Domaines de spécialisation: Neurologue, Algologue, Épileptologue。
+                                <br><br>
+                                Fonctions académiques: Maître Assistant/FSTS/UGANC。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h1 class="name-highlight"><span style="display: block;">Alpha Boubacar Bah</span></h1>
+                <h2 style="color: #f99d1c;">医学博士, 副教授 / Neurochirurgien, Professeur agrégé</h2>
+                <div class="dual-column-container">
+                    <div class="left-profile">
+                        <img src="images/Alpha Boubacar Bah.JPG" alt="Alpha Boubacar Bah照片" class="profile-image">
+                        <p class="base-info-text">
+                            <span class="base-info-text-cn">东卡医院、科纳克里大学, 神经外科</span>
+                        </p>
+                        <p class="base-info-text" style="margin-top: 10px;">
+                            <span class="base-info-text-fr">Hôpital National Donka, Université de Conakry, Neurochirurgien</span>
+                        </p>
+                    </div>
+                    <div class="right-academics">
+                        <div style="margin-bottom: 18px;">
+                            <h3 class="section-title">🇨🇳 介绍</h3>
+                            <p class="description-text">
+                                专业方向: 神经外科; 证据数据调查与情境化建议。
+                                <br><br>
+                                教育背景: 他曾就读于罗切斯特梅奥诊所和埃德蒙顿阿尔伯塔大学医院, 并曾在巴黎医院实习。
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="section-title">🇬🇳 Introduction </h3>
+                            <p class="description-text">
+                                Domaines de spécialisation: Neurochirurgie; Investigation des données probantes et recommandations contextualisées。
+                                <br><br>
+                                Parcours: Il a étudié à la Mayo Clinic de Rochester et à l'Alberta University Hospital d'Edmonton, et a été interne dans les hôpitaux de Paris。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h1 class="name-highlight"><span style="display: block;">Diallo Amadou</span></h1>
+                <h2 style="color: #f99d1c;">神经内科医生 / Neurologue</h2>
+                <div class="dual-column-container">
+                    <div class="left-profile">
+                        <img src="images/Diallo Amadou.JPG" alt="Diallo Amadou照片" class="profile-image">
+                        <p class="base-info-text">
+                            <span class="base-info-text-cn">中几友好医院, 神经内科</span>
+                        </p>
+                        <p class="base-info-text" style="margin-top: 10px;">
+                            <span class="base-info-text-fr">Neurologue de l'hôpital de l'amitié sino-guinéenne de Kipé</span>
+                        </p>
+                    </div>
+                    <div class="right-academics">
+                        <div style="margin-bottom: 18px;">
+                            <h3 class="section-title">🇨🇳 介绍</h3>
+                            <p class="description-text">
+                                教育背景: 科纳克里大学国家医学文凭, 获神经生理学大学文凭, 曾学习于法国巴黎皮提耶-萨尔佩特里埃医院; 拥有法国卡昂大学医院(CHU-CAEN)学术实习经历。
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="section-title">🇬🇳 Introduction</h3>
+                            <p class="description-text">
+                                Formation: Diplômé de l'UGANC; DU: Neurophysiologie/hôpital Pitié-Salpêtrière/France; Stage académique Fra (CHU-CAEN).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+ 
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            controls: true,
+            progress: false,
+            center: true,   
+            loop: false,
+            transition: 'fade',
+            // 锁定 16:9 比例
+            //width: 1920,   
+            //height: 1080,
+        });
+    </script>
+</body>
+</html>
